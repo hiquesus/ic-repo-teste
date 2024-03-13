@@ -1,3 +1,3 @@
 #!/bin/bash
 
-grep -En "(que ){1,2}" $1
+grep -En "($2 ){1,2}" $1
