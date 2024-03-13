@@ -1,3 +1,3 @@
 #!/bin/bash
 
-grep teste GREP.md
+grep -En "(que ){1,2}" $1
