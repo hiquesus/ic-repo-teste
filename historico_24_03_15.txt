@@ -590,3 +590,21 @@
   590  git status
   591  cd ..
   592  history > historico.txt
+  593  code historico.txt 
+  594  mv historico.txt historico20240315.txt
+  595  git status
+  596  git add -a
+  597  git add -A
+  598  git status
+  599  git commit -a
+  600  git push -u origin main
+  601  got re,pte add progom git@github.com:hiquesus/ic-repo-teste.git
+  602  git remote add origin git@github.com:hiquesus/ic-repo-teste.git
+  603  git remote
+  604  git status
+  605  git add -A
+  606  git commit -a
+  607  git push -u origin main
+  608  history
+  609  mv historico20240315.txt historico_24_03_15.txt
+  610  history > historico_24_03_15.txt 
