@@ -543,68 +543,17 @@
   543  git status
   544  git remote -v
   545  ls
-  546  git status
-  547  git log
-  548  git push -u origin main
-  549  history
-  550  ssh-key
-  551  ssh-keygen
-  552  ls
-  553  ls --/.ssh
-  554  ls ~/.ssh
-  555  la
-  556  git clone https://github.com/hiquesus/leetcode.git
-  557  la
-  558  cd leetcode
-  559  la
-  560  cd 0036-valid-sudoku/
-  561  ls
-  562  code README.md 
-  563  code 0036-valid-sudoku.py 
-  564  cd ..
-  565  ls
-  566  cd ..
-  567  ls ~/.ssh
-  568  git status
-  569  git push -u origin main
-  570  gedit
-  571  ls ~/.ssh
-  572  ls ~/.ssh/id_rsa.pub
-  573  gedit ls ~/.ssh/id_rsa.pub
-  574  gedit ~/.ssh/id_rsa.pub
-  575  gdit ~/.ssh/id_rsa.pub
-  576  gedit ~/.ssh/id_rsa.pub
-  577  git status
-  578  git push -u origin main
-  579  git add leetcode/
-  580  git push -u origin main
-  581  git status
-  582  git commit -a
-  583  git push -u origin main
-  584  la
-  585  cd leetcode/
-  586  la
-  587  cd ..
-  588  git status
-  589  cd leetcode/
-  590  git status
-  591  cd ..
-  592  history > historico.txt
-  593  code historico.txt 
-  594  mv historico.txt historico20240315.txt
-  595  git status
-  596  git add -a
-  597  git add -A
-  598  git status
-  599  git commit -a
-  600  git push -u origin main
-  601  got re,pte add progom git@github.com:hiquesus/ic-repo-teste.git
-  602  git remote add origin git@github.com:hiquesus/ic-repo-teste.git
-  603  git remote
-  604  git status
-  605  git add -A
-  606  git commit -a
-  607  git push -u origin main
-  608  history
-  609  mv historico20240315.txt historico_24_03_15.txt
-  610  history > historico_24_03_15.txt 
+  546  testec.c
+  547  ./testec.c
+  548  la
+  549  chmod
+  550  chmod --help
+  551  chmod u+rwx testec.c
+  552  chmod u+rwx testecpp.cpp
+  553  ./testec.c
+  554  ls
+  555  git status
+  556  git add -A
+  557  git commit -a
+  558  ls
+  559  history > historico_24_03_15.txt 
