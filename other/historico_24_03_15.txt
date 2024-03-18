@@ -542,18 +542,74 @@
   542  git push -u origin main
   543  git status
   544  git remote -v
-  545  ls
-  546  testec.c
-  547  ./testec.c
-  548  la
-  549  chmod
-  550  chmod --help
-  551  chmod u+rwx testec.c
-  552  chmod u+rwx testecpp.cpp
-  553  ./testec.c
-  554  ls
-  555  git status
-  556  git add -A
-  557  git commit -a
-  558  ls
-  559  history > historico_24_03_15.txt 
+  545  /bin/python3 "/home/aluno/Área de Trabalho/introComp/git/repo01/pandasteste.py"
+  546  python3 pandasteste.py 
+  547  /bin/python3 "/home/aluno/Área de Trabalho/introComp/git/repo01/pandasteste.py"
+  548  git status
+  549  git add -A
+  550  git commit -a
+  551  git push
+  552  shutdown now
+  553  git status
+  554  git pull
+  555  git --help
+  556  history
+  557  ls
+  558  cd python/
+  559  ls
+  560  la
+  561  cd ..
+  562  ls
+  563  git pull
+  564  ls
+  565  cd python/
+  566  ls
+  567  code cidades.py
+  568  pip install [200~matplotlib~
+  569  pip install matplotlib
+  570  python3 cidades.py 
+  571  cd ..
+  572  mv pandasteste.py ./python/
+  573  cd python/
+  574  ls
+  575  code pandasteste.py 
+  576  python3 pandasteste.py 
+  577  git status
+  578  git add -A
+  579  git commit -a
+  580  git push
+  581  cd ..
+  582  git log
+  583  git status
+  584  mv testec.c ./other/
+  585  mv testecpp.cpp ./other/
+  586  yabasic ./basic/fibonacci.bas 
+  587  yabasic ./basic/helloworld.bas 
+  588  git status
+  589  git commit -a
+  590  gt push
+  591  git push
+  592  git status
+  593  git add -a
+  594  git add -A
+  595  git commit -a
+  596  git push
+  597  git status
+  598  git add -A
+  599  git commit -a
+  600  git push
+  601  ip address
+  602  sudo apt install traceroute
+  603  ping www.fgv.br
+  604  mtr www.fgv.br
+  605  mtr www.saude.gov.br
+  606  ping www.saude.gov.br
+  607  ping www.fgv.br
+  608  ip
+  609  dns
+  610  ip dns
+  611  sudo apt install netstat
+  612  sudo apt install net-tools
+  613  netstat -at
+  614  cd other/
+  615  history > historico_24_03_15.txt 
