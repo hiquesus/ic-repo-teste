@@ -19,6 +19,4 @@ with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s: # cria o Socket
             if data == b"Fim":
                 conn.sendall(b"TCHAU!!!")
                 break
-            #if not data:
-            #    break
             conn.sendall(data) # Envia de volta os dados (eco)
