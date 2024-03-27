@@ -1,0 +1,11 @@
+sort1 uses: Bubble Sort
+
+How do you know?: It is the fastest sort when the largest list is already sorted (sorted50000.txt), taking only 0.727 seconds to finish the sorting having an Ω(n) (the number of operations being the number of elements in the list, the algorithm has "looked" through the sorted list only once to finish the sorting); while the other 2 sorts took, respectively, 1.188 and 3.573 seconds.
+
+sort2 uses: Merge Sort
+
+How do you know?: It is the fasted of the 3 sorting mechanisms when using a larger randomized list of numers (random10000.txt), sorting everything in 0.081 seconds and having an O(n log(n)) complexity, being considerably faster when compared to the other sorts (0.347 and 0.162 seconds).
+
+sort3 uses: Selection Sort
+
+How do you know?: It is slower with larger lists as it has both O(n²) and Ω(n²) notations; meaning that the more itens there are to be sorted inside the lists, the more time it will take to sort them despite being or not already sorted in first place, having an exponential growth. // random10000 - 0.162s and sorted50000 - 3.573s

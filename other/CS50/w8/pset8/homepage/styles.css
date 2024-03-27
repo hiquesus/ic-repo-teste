@@ -1,0 +1,159 @@
+body {
+    background-color: #333f58;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+body::-webkit-scrollbar{ /*Hide scrollbars */
+    display: none;
+}
+
+html {
+    height: -webkit-fill-available;
+    scroll-behavior: smooth;
+}
+
+div#title {
+    color: #ee8695;
+    font-size: 40px;
+    font-weight: 500;
+    line-height: 0;
+    position: relative;
+    top: 50px;
+    font-family: "Lucida Console", "Courier New", monospace;
+}
+
+.buttons {
+    text-align: center;
+    line-height: 5;
+}
+
+.button {
+    margin-left: 30px;
+    margin-right: 30px;
+    font-family: "Lucida Console", "Courier New", monospace;
+    font-size: 20px;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: relative;
+    background-color: #292831;
+    color: #ee8695;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    padding: 12px 16px;
+    z-index: 1;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 60px;
+    border-bottom-left-radius: 60px;
+    border-bottom-right-radius: 20px;
+}
+
+ .dropdown:hover .dropdown-content {
+    display: block;
+}
+
+h1#intro {
+    color: #fbbbad;
+    font-size: 20px;
+    font-weight: 500;
+    text-indent: 10px;
+    position: relative;
+    top: 100px;
+    line-height: 40px;
+    margin: 1;
+    font-family: "Lucida Console", "Courier New", monospace;
+    white-space: pre-line;
+    -webkit-user-select: none; /* Safari */
+    -ms-user-select: none; /* IE 10 and IE 11 */
+    user-select: none; /* Standard syntax */
+}
+
+div#intro {
+    color: #fbbbad;
+    font-size: 20px;
+    font-weight: 500;
+    text-indent: 10px;
+    position: relative;
+    top: 100px;
+    line-height: 40px;
+    margin: 1;
+    font-family: "Lucida Console", "Courier New", monospace;
+    white-space: pre-line;
+    -webkit-user-select: none; /* Safari */
+    -ms-user-select: none; /* IE 10 and IE 11 */
+    user-select: none; /* Standard syntax */
+}
+
+p#awards {
+    color: #ee8695;
+    font-size: 20px;
+    font-weight: 500;
+    text-indent: 10px;
+    position: relative;
+    top: 100px;
+    line-height: 40px;
+    margin: 1;
+    font-family: "Lucida Console", "Courier New", monospace;
+    white-space: pre-line;
+    -webkit-user-select: none; /* Safari */
+    -ms-user-select: none; /* IE 10 and IE 11 */
+    user-select: none; /* Standard syntax */
+}
+
+.opacity3s {
+    animation: opacity 3s;
+    animation-timing-function: ease-out;
+}
+
+.introanim {
+    animation: slideup 1.5s;
+    animation-timing-function: ease-out;
+}
+
+.movedown {
+    animation: movedown 1s;
+    animation-timing-function: ease-out;
+}
+
+@keyframes opacity {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes movedown {
+    from {
+        position: relative;
+        top: -10px;
+        opacity: 0;
+    }
+    to {
+        position: relative;
+        top: 50px;
+        opacity: 1;
+    }
+}
+
+@keyframes slideup {
+    from {
+        opacity: 0;
+        line-height: 100px;
+    }
+    to {
+        opacity: 1;
+        line-height: 40px;
+    }
+}

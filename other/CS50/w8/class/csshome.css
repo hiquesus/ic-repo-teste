@@ -1,0 +1,51 @@
+.centered {
+    text-align: center;
+}
+
+.helvetica {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.large {
+    font-size: 60px;
+}
+
+.medium {
+    font-size: 40px;
+}
+
+.small {
+    font-size: 15px;
+}
+
+.background {
+    background-color: #F4BBF7;
+    animation: bgColor 5s infinite linear;
+}
+@keyframes bgColor {
+    12.5% {
+        background-color: #F7B9CC;
+    }
+    25% {
+        background-color: #F7C8B9
+    }
+    37.5% {
+        background-color: #F7E2C0
+    }
+    50% {
+        background-color: #EBF7D6
+    }
+    62.5% {
+        background-color: #DEF7EF
+    }
+    75% {
+        background-color: #CDD1F7
+    }
+    87.5% {
+        background-color: #DDBEF7
+    }
+    100% {
+        background-color: #F4BBF7
+    }
+
+}

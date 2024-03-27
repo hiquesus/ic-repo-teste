@@ -1,0 +1,200 @@
+w7/class/ $ sqlite3 favourites.db
+SQLite version 3.40.1 2022-12-28 14:03:47
+Enter ".help" for usage hints.
+sqlite> SELECT * FROM favourites;
++-----------+-------------+
+|   team    |   player    |
++-----------+-------------+
+| France    | Mbappé      |
+| Argentina | Di María    |
+| Brazil    | Neymar      |
+| Brazil    | Neymar      |
+| Brazil    | Vini Jr.    |
+| Argentina | Messi       |
+| Argentina | Messi       |
+| Argentina | Messi       |
+| Brazil    | Richarlison |
+| Brazil    | Richarlison |
+| Brazil    | Richarlison |
+| France    | Mbappe      |
+| France    | Giroud      |
++-----------+-------------+
+sqlite> SELECT team FROM favourites;
++-----------+
+|   team    |
++-----------+
+| France    |
+| Argentina |
+| Brazil    |
+| Brazil    |
+| Brazil    |
+| Argentina |
+| Argentina |
+| Argentina |
+| Brazil    |
+| Brazil    |
+| Brazil    |
+| France    |
+| France    |
++-----------+
+sqlite> SELECT COUNT(*) FROM favourites;
++----------+
+| COUNT(*) |
++----------+
+| 13       |
++----------+
+sqlite> SELECT DISTINCT(team) FROM favourites;
++-----------+
+|   team    |
++-----------+
+| France    |
+| Argentina |
+| Brazil    |
++-----------+
+sqlite> SELECT DISTINCT(*) FROM favourites;
+Parse error: near "*": syntax error
+  SELECT DISTINCT(*) FROM favourites;
+                  ^--- error here
+sqlite> SELECT COUNT(DISTINCT(team)) FROM favourites;
++-----------------------+
+| COUNT(DISTINCT(team)) |
++-----------------------+
+| 3                     |
++-----------------------+
+sqlite> SELECT COUNT(DISTINCT(team)) AS n FROM favourites;
++---+
+| n |
++---+
+| 3 |
++---+
+sqlite> SELECT COUNT(*) FROM favourites WHERE team = 'Brazil';
++----------+
+| COUNT(*) |
++----------+
+| 6        |
++----------+
+sqlite> SELECT COUNT(*) FROM favourites;
++----------+
+| COUNT(*) |
++----------+
+| 13       |
++----------+
+sqlite> SELECT COUNT(*) FROM favourites WHERE team = 'Brazil' AND player = 'Richarlison';
++----------+
+| COUNT(*) |
++----------+
+| 3        |
++----------+
+sqlite> SELECT team, COUNT(*) FROM favourites GROUP BY team;
++-----------+----------+
+|   team    | COUNT(*) |
++-----------+----------+
+| Argentina | 4        |
+| Brazil    | 6        |
+| France    | 3        |
++-----------+----------+
+sqlite> SELECT team, COUNT(*) FROM favourites GROUP BY team ORDER BY COUNT(*);
++-----------+----------+
+|   team    | COUNT(*) |
++-----------+----------+
+| France    | 3        |
+| Argentina | 4        |
+| Brazil    | 6        |
++-----------+----------+
+sqlite> SELECT team, COUNT(*) FROM favourites GROUP BY team ORDER BY COUNT(*) DESC;
++-----------+----------+
+|   team    | COUNT(*) |
++-----------+----------+
+| Brazil    | 6        |
+| Argentina | 4        |
+| France    | 3        |
++-----------+----------+
+sqlite> SELECT team, COUNT(*) FROM favourites GROUP BY team ORDER BY COUNT(*) DESC LIMIT 1;
++--------+----------+
+|  team  | COUNT(*) |
++--------+----------+
+| Brazil | 6        |
++--------+----------+
+sqlite> SELECT DISTINCT(team) FROM favourites;
++-----------+
+|   team    |
++-----------+
+| France    |
+| Argentina |
+| Brazil    |
++-----------+
+sqlite> INSERT INTO favourites (team, player) VALUES('England', 'Harry Kane');
+sqlite> SELECT DISTINCT(team) FROM favourites;
++-----------+
+|   team    |
++-----------+
+| France    |
+| Argentina |
+| Brazil    |
+| England   |
++-----------+
+sqlite> SELECT * FROM favourites WHERE team = 'Brazil';
++--------+-------------+
+|  team  |   player    |
++--------+-------------+
+| Brazil | Neymar      |
+| Brazil | Neymar      |
+| Brazil | Vini Jr.    |
+| Brazil | Richarlison |
+| Brazil | Richarlison |
+| Brazil | Richarlison |
++--------+-------------+
+sqlite> SELECT * FROM favourites WHERE team = 'England';
++---------+------------+
+|  team   |   player   |
++---------+------------+
+| England | Harry Kane |
++---------+------------+
+sqlite> UPDATE favourites SET team = 'Portugal' WHERE team = 'England';
+sqlite> UPDATE favourites SET player = 'Cristiano Ronaldo' WHERE player = 'Harry Kane';
+sqlite> SELECT * FROM favourites WHERE team = 'Portugal';
++----------+-------------------+
+|   team   |      player       |
++----------+-------------------+
+| Portugal | Cristiano Ronaldo |
++----------+-------------------+
+sqlite> SELECT * FROM favourites WHERE team = 'England';
++---------+------------+
+|  team   |   player   |
++---------+------------+
+sqlite> SELECT * FROM favourites;
++-----------+-------------------+
+|   team    |      player       |
++-----------+-------------------+
+| France    | Mbappé            |
+| Argentina | Di María          |
+| Brazil    | Neymar            |
+| Brazil    | Neymar            |
+| Brazil    | Vini Jr.          |
+| Argentina | Messi             |
+| Argentina | Messi             |
+| Argentina | Messi             |
+| Brazil    | Richarlison       |
+| Brazil    | Richarlison       |
+| Brazil    | Richarlison       |
+| France    | Mbappe            |
+| France    | Giroud            |
+| Portugal  | Cristiano Ronaldo |
++-----------+-------------------+
+sqlite> DELETE FROM favourites WHERE team = 'Portugal'; # delete Portugal
+sqlite> DELETE FROM favourites; # delete everything
+
+# pause
+
+# other day
+
+w7/class/ $ sqlite3 favourites.db
+SQLite version 3.40.1 2022-12-28 14:03:47
+Enter ".help" for usage hints.
+sqlite> SELECT COUNT(*) AS n FROM favourites WHERE team = 'Brazil';
++---+
+| n |
++---+
+| 6 |
++---+
+sqlite> 

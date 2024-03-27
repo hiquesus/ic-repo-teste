@@ -1,0 +1,18 @@
+sqlite> SELECT AVG(energy)FROM songs;
++-------------+
+| AVG(energy) |
++-------------+
+| 0.65906     |
++-------------+
+sqlite> SELECT AVG(valence) FROM songs;
++--------------+
+| AVG(valence) |
++--------------+
+| 0.484443     |
++--------------+
+sqlite> SELECT AVG(danceability) FROM songs;
++-------------------+
+| AVG(danceability) |
++-------------------+
+| 0.71646           |
++-------------------+

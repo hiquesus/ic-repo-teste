@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+        <link href="styles.css" rel="stylesheet">
+        <title>Trivia!</title>
+        <!--- <script src="triviajs.js"> I did it there but pasted the js code in the html file just in case --->
+        <script>
+            // TODO: Add code to check answers to questions
+            document.addEventListener('DOMContentLoaded', function() {
+                let answered = false;
+                let won = false;
+                let correct = document.querySelector('.correct');
+                correct.addEventListener('click', function() {
+                    if (answered === false) {
+                        correct.style.backgroundColor = 'green';
+                        document.querySelector('answer').innerHTML = "Correct!";
+                        answered = true;
+                        won = true;
+                    }
+                    else if (won === true) {
+                        document.querySelector('answered').innerHTML = "You've already won. stop clicking things silly!";
+                    }
+                    else {
+                        document.querySelector('answered').innerHTML = "You've already made your guess, but the answer was indeed Brasilia";
+                    }
+                });
+
+                let incorrect = document.querySelectorAll('.incorrect');
+                for (let i = 0; i < incorrect.length; i += 1) {
+                    incorrect[i].addEventListener('click', function() {
+                        if (answered === false) {
+                            incorrect[i].style.backgroundColor = 'red';
+                            document.querySelector('answer').innerHTML = "Incorrect";
+                            answered = true;
+                        }
+                        else if (won === true) {
+                            document.querySelector('answered').innerHTML = "You've already won. stop clicking things silly!";
+                        }
+                        else {
+                            document.querySelector('answered').innerHTML = "You've already tried it once, but the answer was: Brasilia";
+                        }
+                    });
+                }
+                let check = document.querySelector('.checkanswer');
+                var football = 'football';
+                var soccer = 'soccer';
+                let q2input = document.querySelector('input');
+                check.addEventListener('click', function() {
+                    var q2answer = document.getElementById('q2answer').value.toLowerCase();
+                    if (q2answer === football) {
+                        q2input.style.backgroundColor = 'green';
+                        document.querySelector('q2check').innerHTML = "Correct!";
+                    }
+                    else if (q2answer === soccer) {
+                        document.querySelector('q2check').innerHTML = "Correct!?? IT'S FOOTBALL!!!";
+                        q2input.style.backgroundColor = 'green';
+                    }
+                    else {
+                        document.querySelector('q2check').innerHTML = "Incorrect"
+                        q2input.style.backgroundColor = 'red';
+                    }
+                });
+            })
+        </script>
+    </head>
+    <body>
+        <div class="header">
+            <h1>Trivia!</h1>
+        </div>
+
+        <div class="container">
+            <div class="section">
+                <h2>Part 1: Multiple Choice </h2>
+                <hr>
+
+                <!-- TODO: Add multiple choice question here -->
+                <h3> What is the capital of Brazil? </h3>
+                <cities>
+                    <button class="incorrect"> Rio De janeiro </button>
+                    <button class="incorrect"> São Paulo </button>
+                    <button class="correct"> Brasilia </button>
+                    <button class="incorrect"> Salvador </button>
+                    <button class="incorrect"> Recife </button>
+                </cities>
+                <div>
+                    <answer></answer>
+                </div>
+                <div>
+                    <answered></answered>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2>Part 2: Free Response</h2>
+                <hr>
+                <!-- TODO: Add free response question here -->
+                <h3> What is Brazil's national sport? </h3>
+                <input id = "q2answer" class="input" autocomplete="off" autofocus name="q" placeholder="Answer" type="text">
+                <button class="checkanswer"> Check Answer </button>
+                <div>
+                    <q2check></q2check>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

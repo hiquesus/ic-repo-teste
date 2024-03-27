@@ -1,0 +1,24 @@
+/* oi */
+
+body {
+    background-color: lightblue;
+}
+
+h1 {
+    color: blanchedalmond;
+    text-align: center;
+    text-shadow: 2px 2px 1px #0a0a73;
+}
+
+p {
+    font-family: helvetica;
+    font-size: 30px;
+}
+
+input {
+    background-color: blanchedalmond;
+}
+
+.classe1 {
+    text-shadow: 2px 2px 1px white
+}
